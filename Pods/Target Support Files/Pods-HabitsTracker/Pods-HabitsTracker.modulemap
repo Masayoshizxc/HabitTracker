@@ -1,0 +1,6 @@
+framework module Pods_HabitsTracker {
+  umbrella header "Pods-HabitsTracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
