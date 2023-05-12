@@ -52,14 +52,18 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        tabBar.layer.cornerRadius = tabbarHeight / 2
+//        tabBar.backgroundColor = .white
+        setupConstraints()
         configureTabs()
-        UITabBar.appearance().tintColor = UIColor(red: 62/255, green: 174/255, blue: 255/255, alpha: 1)
-        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 137/255, green: 149/255, blue: 172/255, alpha: 0.8)
+        
+        UITabBar.appearance().tintColor = UIColor(red: 68/255, green: 99/255, blue: 99/255, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = .black
         
         navigationItem.hidesBackButton = true
-        navigationController?.navigationBar.backgroundColor = .white
-        tabBarController?.tabBar.isTranslucent = false
-        tabBarController?.tabBar.backgroundColor = .white
+//        navigationController?.navigationBar.backgroundColor = .white
+//        tabBarController?.tabBar.isTranslucent = false
+//        tabBarController?.tabBar.backgroundColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -81,23 +85,26 @@ class TabBarController: UITabBarController {
             homeCoordinator.navigationController,
             profileCoordinator.navigationController
         ]
+        selectedIndex = 1
         
     }
+    
     private func setupConstraints(){
-        let posX: CGFloat = 10
-        let posY: CGFloat = 14
-        let width = tabBar.bounds.width - posX * 2
-        let height = tabBar.bounds.height - posY * 2
+        let positionOnX: CGFloat = 10
+        let positionOnY: CGFloat = 14
+        let width = tabBar.bounds.width - positionOnX * 2
+        let height = tabBar.bounds.height + positionOnY * 2
         
         let roundLayer = CAShapeLayer()
         
         let bezierPath = UIBezierPath(
-                roundedRect: CGRect(
-                    x: posX,
-                    y: posY,
-                    width: width,
-                    height: height
-                ), cornerRadius: height / 2
+            roundedRect: CGRect(
+                x: positionOnX,
+                y: tabBar.bounds.minY - positionOnY,
+                width: width,
+                height: height
+            ),
+            cornerRadius: height / 2
         )
         
         roundLayer.path = bezierPath.cgPath
@@ -106,6 +113,9 @@ class TabBarController: UITabBarController {
         
         tabBar.itemWidth = width / 5
         tabBar.itemPositioning = .centered
+        
+        roundLayer.fillColor = UIColor.white.cgColor
+        
     }
     
 }

@@ -7,4 +7,6 @@ target 'HabitsTracker' do
 
   # Pods for HabitsTracker
 pod 'SnapKit'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 end

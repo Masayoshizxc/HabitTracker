@@ -7,6 +7,9 @@
 
 import UIKit
 import SnapKit
+import Firebase
+import GoogleSignIn
+
 
 class AuthViewController: BaseViewController {
     

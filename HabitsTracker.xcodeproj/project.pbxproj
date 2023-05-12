@@ -94,14 +94,14 @@
 		179B3A8F2A0650B70003F85B /* HabitsTracker */ = {
 			isa = PBXGroup;
 			children = (
+				179B3A902A0650B70003F85B /* AppDelegate.swift */,
+				179B3A922A0650B70003F85B /* SceneDelegate.swift */,
+				179B3A942A0650B70003F85B /* ViewController.swift */,
 				AE6F372C2A0E0323001E2FC5 /* Extensions */,
 				AE0D44F02A0CA332008696F7 /* TabBar */,
 				AE4946512A0BEE8F002A0B82 /* Coordinator */,
 				AE49464E2A0B8884002A0B82 /* Reusable */,
 				AE2E662B2A0B46FB00497397 /* Main */,
-				179B3A902A0650B70003F85B /* AppDelegate.swift */,
-				179B3A922A0650B70003F85B /* SceneDelegate.swift */,
-				179B3A942A0650B70003F85B /* ViewController.swift */,
 				179B3A992A0650BC0003F85B /* Assets.xcassets */,
 				179B3A9B2A0650BC0003F85B /* LaunchScreen.storyboard */,
 				179B3A9E2A0650BC0003F85B /* Info.plist */,
