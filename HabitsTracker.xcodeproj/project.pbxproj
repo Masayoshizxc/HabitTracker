@@ -29,6 +29,11 @@
 		AE70DF472A0C108200ACA1C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */; };
 		AE70DF492A0C10DA00ACA1C6 /* TitleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70DF482A0C10DA00ACA1C6 /* TitleLogo.swift */; };
 		AE70DF4E2A0C1CAD00ACA1C6 /* comfortaa-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE70DF4D2A0C1CAD00ACA1C6 /* comfortaa-bold.ttf */; };
+		AECA087C2A0E76920063709A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AECA087B2A0E76920063709A /* FirebaseAnalytics */; };
+		AECA087E2A0E76920063709A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = AECA087D2A0E76920063709A /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		AECA08812A0E77D50063709A /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = AECA08802A0E77D50063709A /* GoogleSignIn */; };
+		AECA08832A0E77D50063709A /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AECA08822A0E77D50063709A /* GoogleSignInSwift */; };
+		AECA08852A0E791D0063709A /* GoogleService-Info-5.plist in Resources */ = {isa = PBXBuildFile; fileRef = AECA08842A0E791D0063709A /* GoogleService-Info-5.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,7 @@
 		AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE70DF482A0C10DA00ACA1C6 /* TitleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLogo.swift; sourceTree = "<group>"; };
 		AE70DF4D2A0C1CAD00ACA1C6 /* comfortaa-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "comfortaa-bold.ttf"; sourceTree = "<group>"; };
+		AECA08842A0E791D0063709A /* GoogleService-Info-5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-5.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECA08832A0E77D50063709A /* GoogleSignInSwift in Frameworks */,
+				AECA087C2A0E76920063709A /* FirebaseAnalytics in Frameworks */,
+				AECA08812A0E77D50063709A /* GoogleSignIn in Frameworks */,
+				AECA087E2A0E76920063709A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				9D0D668E048DC82C6915B6C8 /* Pods_HabitsTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +115,7 @@
 				179B3A992A0650BC0003F85B /* Assets.xcassets */,
 				179B3A9B2A0650BC0003F85B /* LaunchScreen.storyboard */,
 				179B3A9E2A0650BC0003F85B /* Info.plist */,
+				AECA08842A0E791D0063709A /* GoogleService-Info-5.plist */,
 			);
 			path = HabitsTracker;
 			sourceTree = "<group>";
@@ -290,6 +301,12 @@
 			dependencies = (
 			);
 			name = HabitsTracker;
+			packageProductDependencies = (
+				AECA087B2A0E76920063709A /* FirebaseAnalytics */,
+				AECA087D2A0E76920063709A /* FirebaseAnalyticsWithoutAdIdSupport */,
+				AECA08802A0E77D50063709A /* GoogleSignIn */,
+				AECA08822A0E77D50063709A /* GoogleSignInSwift */,
+			);
 			productName = HabitsTracker;
 			productReference = 179B3A8D2A0650B70003F85B /* HabitsTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -318,6 +335,10 @@
 				Base,
 			);
 			mainGroup = 179B3A842A0650B70003F85B;
+			packageReferences = (
+				AECA087A2A0E76920063709A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AECA087F2A0E77D50063709A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 179B3A8E2A0650B70003F85B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -332,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECA08852A0E791D0063709A /* GoogleService-Info-5.plist in Resources */,
 				AE70DF4E2A0C1CAD00ACA1C6 /* comfortaa-bold.ttf in Resources */,
 				179B3A9D2A0650BC0003F85B /* LaunchScreen.storyboard in Resources */,
 				179B3A9A2A0650BC0003F85B /* Assets.xcassets in Resources */,
@@ -616,6 +638,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AECA087A2A0E76920063709A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		AECA087F2A0E77D50063709A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AECA087B2A0E76920063709A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECA087A2A0E76920063709A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		AECA087D2A0E76920063709A /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECA087A2A0E76920063709A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		AECA08802A0E77D50063709A /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECA087F2A0E77D50063709A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		AECA08822A0E77D50063709A /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECA087F2A0E77D50063709A /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 179B3A852A0650B70003F85B /* Project object */;
 }
