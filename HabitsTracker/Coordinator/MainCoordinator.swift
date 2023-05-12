@@ -7,20 +7,27 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
-    var parentCoordinator: Coordinator?
-    var children: [Coordinator] = []
+    var finishDelegate: CoordinatorFinishDelegate?
+    var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var parentCoordinator: Coordinator?
     
     init(navigationController: UINavigationController){
         self.navigationController = navigationController
     }
-    
     func start() {
         let vc = AuthViewController()
         vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    func goTabBar() {
+        let child = TabBarCoordinator(navigationController: navigationController)
+        childCoordinators.append(child)
+        child.parentCoordinator = self
+        child.start()
     }
     
     func register(){
@@ -29,21 +36,6 @@ class MainCoordinator: Coordinator {
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-    func home(){
-        let vc = HomeViewController()
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func profile(){
-        let vc = ProfileViewController()
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func stats(){
-        let vc = StatsViewController()
-        vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
-    }
 }
+
+

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum TabbarItems: CaseIterable {
     case first
@@ -17,14 +18,14 @@ enum TabbarItems: CaseIterable {
         switch self {
         case .first:
             return .init(
-                title: "Главная",
-                image: .init(named: "mainIcon"),
+                title: "Статистика",
+                image: .init(named: "statsIcon"),
                 tag: 1
             )
         case .second:
             return .init(
-                title: "Статистика",
-                image: .init(named: "statsIcon"),
+                title: "Главная",
+                image: .init(named: "mainIcon"),
                 tag: 1
             )
         case .third:
@@ -41,12 +42,11 @@ enum TabbarItems: CaseIterable {
 
 
 class TabBarController: UITabBarController {
+    
     weak var coordinator: TabBarCoordinator?
     
+    let statsCoordinator = StatsCoordinator(navigationController: UINavigationController())
     let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-    let favoritesCoordinator = FavoritesCoordinator(navigationController: UINavigationController())
-    let postCoordinator = PostProductCoordinator(navigationController: UINavigationController())
-    let chatCoordinator = ChatCoordinator(navigationController: UINavigationController())
     let profileCoordinator = ProfileCoordinator(navigationController: UINavigationController())
     
     override func viewDidLoad() {
@@ -66,28 +66,46 @@ class TabBarController: UITabBarController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     private func configureTabs() {
+        statsCoordinator.start()
         homeCoordinator.start()
-//        homeCoordinator.parentCoordinator = coordinator
-        favoritesCoordinator.start()
-        //favoritesCoordinator.parentCoordinator = coordinator
-        postCoordinator.start()
-        chatCoordinator.start()
         profileCoordinator.start()
         viewControllers = [
+            statsCoordinator.navigationController,
             homeCoordinator.navigationController,
-            favoritesCoordinator.navigationController,
-            postCoordinator.navigationController,
-            chatCoordinator.navigationController,
             profileCoordinator.navigationController
         ]
         
+    }
+    private func setupConstraints(){
+        let posX: CGFloat = 10
+        let posY: CGFloat = 14
+        let width = tabBar.bounds.width - posX * 2
+        let height = tabBar.bounds.height - posY * 2
+        
+        let roundLayer = CAShapeLayer()
+        
+        let bezierPath = UIBezierPath(
+                roundedRect: CGRect(
+                    x: posX,
+                    y: posY,
+                    width: width,
+                    height: height
+                ), cornerRadius: height / 2
+        )
+        
+        roundLayer.path = bezierPath.cgPath
+        
+        tabBar.layer.insertSublayer(roundLayer, at: 0)
+        
+        tabBar.itemWidth = width / 5
+        tabBar.itemPositioning = .centered
     }
     
 }

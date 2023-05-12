@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  StatsViewController.swift
 //  HabitsTracker
 //
 //  Created by Adilet on 11/5/23.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController{
+class StatsViewController: BaseViewController{
     
-    var coordinator: MainCoordinator?
+    var coordinator: StatsCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
 }

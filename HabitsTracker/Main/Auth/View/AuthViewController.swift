@@ -58,7 +58,7 @@ class AuthViewController: BaseViewController {
         super.viewDidLoad()
         setupSubviews()
         setupConstraints()
-        print("che za huinya")
+        
     }
     
     @objc func registerTapped(){
@@ -68,8 +68,8 @@ class AuthViewController: BaseViewController {
     }
     @objc func loginTapped(){
         
-        coordinator?.home()
         
+        coordinator?.goTabBar()
         
     }
     

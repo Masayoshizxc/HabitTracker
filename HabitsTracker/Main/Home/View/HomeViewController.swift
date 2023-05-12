@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class HomeViewController: BaseViewController{
-    var coordinator: MainCoordinator?
+    var coordinator: HomeCoordinator?
     private lazy var logo: TitleLogo = {
         let l = TitleLogo()
         
@@ -23,7 +23,7 @@ class HomeViewController: BaseViewController{
         b.imageEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
         b.backgroundColor = .white
         b.tintColor = UIColor(red: 68/255, green: 99/255, blue: 99/255, alpha: 1)
-        b.addTarget(self, action: #selector(profileTapped), for: .touchUpInside)
+//        b.addTarget(self, action: #selector(profileTapped), for: .touchUpInside)
         return b
     }()
     private lazy var statsButton: UIButton = {
@@ -34,7 +34,7 @@ class HomeViewController: BaseViewController{
         b.imageEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
         b.backgroundColor = .white
         b.tintColor = UIColor(red: 68/255, green: 99/255, blue: 99/255, alpha: 1)
-        b.addTarget(self, action: #selector(statsTapped), for: .touchUpInside)
+//        b.addTarget(self, action: #selector(statsTapped), for: .touchUpInside)
         return b
     }()
     private lazy var homeButton: UIButton = {
@@ -45,29 +45,29 @@ class HomeViewController: BaseViewController{
         b.imageEdgeInsets = UIEdgeInsets(top: 15,left: 15,bottom: 15,right: 15)
         b.backgroundColor = .white
         b.tintColor = UIColor(red: 68/255, green: 99/255, blue: 99/255, alpha: 1)
-        b.addTarget(self, action: #selector(homeTapped), for: .touchUpInside)
+//        b.addTarget(self, action: #selector(homeTapped), for: .touchUpInside)
         return b
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.navigationController?.isNavigationBarHidden = true
         
-        setupSubviews()
-        setupConstraints()
+//        
+//        setupSubviews()
+//        setupConstraints()
         
     }
     
-    @objc func profileTapped(){
-        coordinator?.profile()
-    }
-    @objc func statsTapped(){
-        coordinator?.stats()
-    }
-    @objc func homeTapped(){
-        coordinator?.home()
-    }
-    
+//    @objc func profileTapped(){
+//        coordinator?.profile()
+//    }
+//    @objc func statsTapped(){
+//        coordinator?.stats()
+//    }
+//    @objc func homeTapped(){
+//        coordinator?.home()
+//    }
+//
 }
 
 extension HomeViewController{

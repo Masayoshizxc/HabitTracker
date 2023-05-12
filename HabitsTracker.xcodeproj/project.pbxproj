@@ -21,6 +21,10 @@
 		AE4946502A0B888F002A0B82 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49464F2A0B888F002A0B82 /* BaseViewController.swift */; };
 		AE4946532A0BEE9C002A0B82 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4946522A0BEE9C002A0B82 /* Coordinator.swift */; };
 		AE4946552A0C0B50002A0B82 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4946542A0C0B50002A0B82 /* MainCoordinator.swift */; };
+		AE6F371E2A0D55BA001E2FC5 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F371D2A0D55BA001E2FC5 /* HomeCoordinator.swift */; };
+		AE6F37282A0D7FB5001E2FC5 /* StatsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F37272A0D7FB5001E2FC5 /* StatsCoordinator.swift */; };
+		AE6F372B2A0D8002001E2FC5 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F372A2A0D8002001E2FC5 /* ProfileCoordinator.swift */; };
+		AE6F372E2A0E032D001E2FC5 /* Extension + ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6F372D2A0E032D001E2FC5 /* Extension + ScreenSize.swift */; };
 		AE70DF452A0C0D8700ACA1C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70DF442A0C0D8700ACA1C6 /* RegisterViewController.swift */; };
 		AE70DF472A0C108200ACA1C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */; };
 		AE70DF492A0C10DA00ACA1C6 /* TitleLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE70DF482A0C10DA00ACA1C6 /* TitleLogo.swift */; };
@@ -46,6 +50,10 @@
 		AE49464F2A0B888F002A0B82 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		AE4946522A0BEE9C002A0B82 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AE4946542A0C0B50002A0B82 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AE6F371D2A0D55BA001E2FC5 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		AE6F37272A0D7FB5001E2FC5 /* StatsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCoordinator.swift; sourceTree = "<group>"; };
+		AE6F372A2A0D8002001E2FC5 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		AE6F372D2A0E032D001E2FC5 /* Extension + ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ScreenSize.swift"; sourceTree = "<group>"; };
 		AE70DF442A0C0D8700ACA1C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AE70DF482A0C10DA00ACA1C6 /* TitleLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLogo.swift; sourceTree = "<group>"; };
@@ -86,11 +94,11 @@
 		179B3A8F2A0650B70003F85B /* HabitsTracker */ = {
 			isa = PBXGroup;
 			children = (
+				AE6F372C2A0E0323001E2FC5 /* Extensions */,
 				AE0D44F02A0CA332008696F7 /* TabBar */,
 				AE4946512A0BEE8F002A0B82 /* Coordinator */,
 				AE49464E2A0B8884002A0B82 /* Reusable */,
-				AE2E662D2A0B470900497397 /* Models */,
-				AE2E662B2A0B46FB00497397 /* Views */,
+				AE2E662B2A0B46FB00497397 /* Main */,
 				179B3A902A0650B70003F85B /* AppDelegate.swift */,
 				179B3A922A0650B70003F85B /* SceneDelegate.swift */,
 				179B3A942A0650B70003F85B /* ViewController.swift */,
@@ -113,7 +121,9 @@
 		AE0D44EA2A0CA1B6008696F7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				AE0D44EB2A0CA1CA008696F7 /* ProfileViewController.swift */,
+				AE6F37242A0D7F97001E2FC5 /* Model */,
+				AE6F37202A0D7887001E2FC5 /* View */,
+				AE6F372A2A0D8002001E2FC5 /* ProfileCoordinator.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -121,7 +131,9 @@
 		AE0D44ED2A0CA1E6008696F7 /* Stats */ = {
 			isa = PBXGroup;
 			children = (
-				AE0D44EE2A0CA1F7008696F7 /* StatsViewController.swift */,
+				AE6F37262A0D7FAB001E2FC5 /* Model */,
+				AE6F37212A0D788C001E2FC5 /* View */,
+				AE6F37272A0D7FB5001E2FC5 /* StatsCoordinator.swift */,
 			);
 			path = Stats;
 			sourceTree = "<group>";
@@ -134,39 +146,34 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
-		AE2E662B2A0B46FB00497397 /* Views */ = {
+		AE2E662B2A0B46FB00497397 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				AE0D44ED2A0CA1E6008696F7 /* Stats */,
 				AE0D44EA2A0CA1B6008696F7 /* Profile */,
-				AE49464B2A0B8864002A0B82 /* AuthView */,
-				AE49464A2A0B8857002A0B82 /* HomeView */,
+				AE49464B2A0B8864002A0B82 /* Auth */,
+				AE49464A2A0B8857002A0B82 /* Home */,
 			);
-			path = Views;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		AE2E662D2A0B470900497397 /* Models */ = {
+		AE49464A2A0B8857002A0B82 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AE6F37292A0D7FF9001E2FC5 /* Model */,
+				AE6F37222A0D7893001E2FC5 /* View */,
+				AE6F371D2A0D55BA001E2FC5 /* HomeCoordinator.swift */,
 			);
-			path = Models;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		AE49464A2A0B8857002A0B82 /* HomeView */ = {
+		AE49464B2A0B8864002A0B82 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */,
+				AE6F37232A0D7F8A001E2FC5 /* Model */,
+				AE6F371F2A0D787C001E2FC5 /* View */,
 			);
-			path = HomeView;
-			sourceTree = "<group>";
-		};
-		AE49464B2A0B8864002A0B82 /* AuthView */ = {
-			isa = PBXGroup;
-			children = (
-				AE49464C2A0B887B002A0B82 /* AuthViewController.swift */,
-				AE70DF442A0C0D8700ACA1C6 /* RegisterViewController.swift */,
-			);
-			path = AuthView;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		AE49464E2A0B8884002A0B82 /* Reusable */ = {
@@ -186,6 +193,75 @@
 				AE0D44F32A0CA846008696F7 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AE6F371F2A0D787C001E2FC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE49464C2A0B887B002A0B82 /* AuthViewController.swift */,
+				AE70DF442A0C0D8700ACA1C6 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE6F37202A0D7887001E2FC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D44EB2A0CA1CA008696F7 /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE6F37212A0D788C001E2FC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D44EE2A0CA1F7008696F7 /* StatsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE6F37222A0D7893001E2FC5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE70DF462A0C108200ACA1C6 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE6F37232A0D7F8A001E2FC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE6F37242A0D7F97001E2FC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE6F37262A0D7FAB001E2FC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE6F37292A0D7FF9001E2FC5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE6F372C2A0E0323001E2FC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE6F372D2A0E032D001E2FC5 /* Extension + ScreenSize.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E5F0E0070993D70FD985685B /* Frameworks */ = {
@@ -313,10 +389,14 @@
 			files = (
 				AE4946502A0B888F002A0B82 /* BaseViewController.swift in Sources */,
 				AE4946552A0C0B50002A0B82 /* MainCoordinator.swift in Sources */,
+				AE6F371E2A0D55BA001E2FC5 /* HomeCoordinator.swift in Sources */,
 				AE49464D2A0B887B002A0B82 /* AuthViewController.swift in Sources */,
+				AE6F372B2A0D8002001E2FC5 /* ProfileCoordinator.swift in Sources */,
+				AE6F37282A0D7FB5001E2FC5 /* StatsCoordinator.swift in Sources */,
 				AE70DF452A0C0D8700ACA1C6 /* RegisterViewController.swift in Sources */,
 				AE4946532A0BEE9C002A0B82 /* Coordinator.swift in Sources */,
 				AE70DF492A0C10DA00ACA1C6 /* TitleLogo.swift in Sources */,
+				AE6F372E2A0E032D001E2FC5 /* Extension + ScreenSize.swift in Sources */,
 				AE0D44EC2A0CA1CA008696F7 /* ProfileViewController.swift in Sources */,
 				AE70DF472A0C108200ACA1C6 /* HomeViewController.swift in Sources */,
 				179B3A952A0650B70003F85B /* ViewController.swift in Sources */,
